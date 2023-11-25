@@ -1,6 +1,6 @@
 ---
 name: Falcon Pi Player
-version: 7.3.5b
+version: 7.3.5c
 url: https://github.com/FalconChristmas/fpp
 panel_icon: mdi:string-lights
 slug: fpp
@@ -14,7 +14,7 @@ boot: auto
 ingress: true
 ingress_port: 80
 ports:
-  80/tcp: 80
+  80/tcp: null
   4048/udp: 4048
   5568/udp: 5568
   9000/tcp: 9000
