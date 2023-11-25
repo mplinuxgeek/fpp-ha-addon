@@ -12,7 +12,7 @@ arch:
 startup: application
 boot: auto
 ingress: true
-ingress_port: 32322
+ingress_port: 80
 ports:
   80/tcp: 80
   4048/udp: 4048
