@@ -1,6 +1,6 @@
 ---
 name: Falcon Pi Player
-version: 7.3.5d
+version: 7.3.5e
 url: https://github.com/FalconChristmas/fpp
 panel_icon: mdi:string-lights
 slug: fpp
@@ -11,10 +11,9 @@ arch:
   - amd64
 startup: application
 boot: auto
-ingress: true
-ingress_port: 80
+webui: http://[HOST]:[PORT:32400]/
 ports:
-  80/tcp: 32380
+  80/tcp: null
   4048/udp: 4048
   5568/udp: 5568
   9000/tcp: 9000
@@ -27,6 +26,8 @@ ports_description:
 map:
   - media:rw
   - config:rw
+  - addon_config:rw
+  - homeassistant_config:rw
 environment:
   HA_ADDON: "true"
 options:
