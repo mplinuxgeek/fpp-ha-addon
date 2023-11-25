@@ -11,7 +11,9 @@ arch:
   - amd64
 startup: application
 boot: auto
-webui: http://[HOST]:[PORT:32400]/
+ingress: true
+ingress_port: 0
+ingress_stream: true
 ports:
   80/tcp: null
   4048/udp: 4048
