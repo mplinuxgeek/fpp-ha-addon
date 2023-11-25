@@ -1,0 +1,39 @@
+---
+name: Falcon Pi Player
+version: 7.3.5a
+url: https://github.com/FalconChristmas/fpp
+panel_icon: mdi:string-lights
+slug: fpp
+description: The Falcon Player (FPP) is a lightweight, optimized, feature-rich sequence player designed to run on low-cost Single Board Computers (SBC).
+arch:
+  - armv7
+  - aarch64
+  - amd64
+startup: application
+boot: auto
+ingress: true
+ingress_port: 32322
+ports:
+  80/tcp: 80
+  4048/udp: 4048
+  5568/udp: 5568
+  9000/tcp: 9000
+  9000/udp: 9000
+  32320/udp: 32320
+  32322/tcp: 32322
+  32328/tcp: 32328
+ports_description:
+  80/tcp: Web interface
+map:
+  - media:rw
+  - config:rw
+environment:
+  HA_ADDON: "true"
+options:
+  STORAGE_PATH: "/config/fpp"
+  CONFIG_PATH: "/config/fpp"
+  MEDIA_PATH: "/media/fpp"
+schema:
+  STORAGE_PATH: str
+  CONFIG_PATH: str
+  MEDIA_PATH: str
